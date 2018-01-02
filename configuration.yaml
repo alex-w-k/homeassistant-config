@@ -1,0 +1,184 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: CAAK Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret time_zone
+  # Customization file
+  customize: !include customize.yaml
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  base_url: !secret base_url
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - samsung_tv
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+
+# Text to speech
+tts:
+  - platform: google
+
+
+# Where to save files
+downloader:
+  download_dir: downloads
+
+# Ring
+
+ring:
+  username: alex549us3@gmail.com
+  password: !secret ring_password
+
+sensor:
+  - platform: ring
+    # weather
+  - platform: darksky
+    api_key: !secret ds_api
+    monitored_conditions:
+      - summary
+      - icon
+      - temperature
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - apparent_temperature
+      - wind_bearing
+      - wind_speed
+      - cloud_cover
+      - humidity
+      - pressure
+      - visibility
+      - minutely_summary
+      - hourly_summary
+      - daily_summary
+      - uv_index
+  - platform: mqtt
+    name: 'Codex Bedroom Door Temp'
+    unit_of_measurement: '°F'
+    state_topic: 'smartthings/Codex Bedroom Door/temperature'
+  - platform: mqtt
+    name: 'Codex Window Temp'
+    unit_of_measurement: '°F'
+    state_topic: 'smartthings/Codex Window/temperature'
+  - platform: mqtt
+    name: 'Lock Battery'
+    unit_of_measurement: '%'
+    state_topic: 'smartthings/Front Door Lock/battery'
+  - platform: mqtt
+    name: 'Codex Window Battery'
+    unit_of_measurement: '%'
+    state_topic: 'smartthings/Codex Window/battery'
+  - platform: mqtt
+    name: 'Codex Bedroom Door Battery'
+    unit_of_measurement: '%'
+    state_topic: 'smartthings/Codex Bedroom Door/battery'
+  - platform: mqtt
+    name: 'Aeon Multisensor 6 Battery'
+    unit_of_measurement: '%'
+    state_topic: 'smartthings/Aeon Multisensor 6/battery'
+  - platform: mqtt
+    name: 'Thermostat Temp'
+    unit_of_measurement: '°F'
+    state_topic: 'smartthings/Thermostat/temperature'
+  - platform: mqtt
+    name: 'Thermostat Humidity'
+    unit_of_measurement: '%'
+    state_topic: 'smartthings/Thermostat/humidity'
+  - platform: mqtt
+    name: 'Multisensor Humidity'
+    unit_of_measurement: '%'
+    state_topic: 'smartthings/Aeon Multisensor 6/humidity'
+  - platform: mqtt
+    name: 'Multisensor Temperature'
+    unit_of_measurement: '°F'
+    state_topic: 'smartthings/Aeon Multisensor 6/temperature'
+  - platform: mqtt
+    name: 'Multisensor Illuminance'
+    unit_of_measurement: lux
+    state_topic: 'smartthings/Aeon Multisensor 6/illuminance'
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+# smartthings/Codex Window/acceleration
+# smartthings/Codex Bedroom Door/acceleration
+# smartthings/Aeon Multisensor 6/motion
+
+ecobee:
+  api_key: !secret ecobee_api_key
+
+
+camera:
+  - platform: ring
+
+lock:
+  !secret lock
+
+
+binary_sensor:
+  - platform: ring
+
+# Cloud
+cloud:
+
+# Hue Lights
+
+hue:
+  bridges:
+    - host: !secret hue_ip
+
+ios:
+
+
+# Smartthings MQTT
+mqtt:
+    broker: 192.168.1.35
+    discovery: true
+    discovery_prefix: smartthings
+
+group: !include_dir_merge_named groups
+automation: !include automations.yaml
+script: !include scripts.yaml

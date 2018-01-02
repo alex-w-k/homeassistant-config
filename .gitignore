@@ -1,0 +1,15 @@
+deps/*
+www/*
+home-assistant.db
+home-assistant_v2.db
+home-assistant.log
+known_devices.yaml
+ecobee.conf
+secrets.yaml
+phue.conf
+phue-0017882ac512.conf
+plex.conf
+.cloud/production_auth.json
+.ios.conf
+.ring_cache.pickle
+.uuid

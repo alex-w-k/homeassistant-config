@@ -1,0 +1,6 @@
+Temperatures:
+  entities:
+    - sensor.codex_bedroom_door_temp
+    - sensor.codex_window_temp
+    - sensor.multisensor_temperature
+    - sensor.thermostat_temp

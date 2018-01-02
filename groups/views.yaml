@@ -1,0 +1,37 @@
+default_view:
+  name: Home
+  icon: mdi:home
+  view: yes
+  entities:
+    - group.LRLights
+    - group.CBRLights
+    - lock.front_door_lock
+    - group.Temperatures
+    - group.bl
+    - group.ring
+    - group.People
+    - group.Weather
+
+Front Door:
+  view: yes
+  entities:
+    - group.ring
+    - group.lock
+
+Living Room:
+  view: yes
+  entities:
+    - group.LRLights
+    - media_player.living_room
+
+Codex Bedroom:
+  view: yes
+  entities:
+    - group.CBRLights
+    - media_player.codex_bedroom
+
+Other:
+  view: yes
+  entities:
+    - group.Internets
+    - group.bl

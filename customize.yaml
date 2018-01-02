@@ -1,0 +1,6 @@
+device_tracker.alexs_iphone_7:
+  friendly_name: Alex
+light.codex_bedroom:
+  friendly_name: Codex Bedroom Lamp
+light.living_room_downstairs:
+  friendly_name: Livingroom Downstairs Lamp

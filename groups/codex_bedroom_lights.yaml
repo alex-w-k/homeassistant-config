@@ -1,0 +1,7 @@
+CBRLights:
+  name: Codex Bedroom Lights
+  entities:
+    - light.codex_bedroom
+    - light.codex_top
+    - light.codex_middle_gen_3
+    - light.codex_bottom_gen_3

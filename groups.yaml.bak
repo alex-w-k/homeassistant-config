@@ -1,0 +1,12 @@
+internet:
+  name: Internets
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+ring:
+  name: Ring
+  entities:
+    - camera.front_door
+    - binary_sensor.ring_front_door_ding
+    - binary_sensor.ring_front_door_motion

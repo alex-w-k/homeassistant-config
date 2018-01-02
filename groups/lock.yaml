@@ -1,0 +1,5 @@
+lock:
+  name: Lock
+  entities:
+    - lock.front_door_lock
+    - sensor.lock_battery
