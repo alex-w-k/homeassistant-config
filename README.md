@@ -26,3 +26,4 @@
 * 6x Xiaomi Mi Smart Temperature and Humidity Sensors
 * Xiaomi Mi Bridge
 * 7x Xiaomi Smart Door and Windows Sensor
+* Many more hue bulbs of various types
