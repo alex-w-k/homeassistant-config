@@ -20,3 +20,9 @@
   * 4x Gen 2 color E26 bulbs
   * 1x Tap switch
   * 1x Dimmer Switch
+
+
+#### Devices I'm planning on buying:
+* 6x Xiaomi Mi Smart Temperature and Humidity Sensors
+* Xiaomi Mi Bridge
+* 7x Xiaomi Smart Door and Windows Sensor
