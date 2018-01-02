@@ -67,7 +67,7 @@ downloader:
 # Ring
 
 ring:
-  username: alex549us3@gmail.com
+  username: !secret ring_user
   password: !secret ring_password
 
 sensor:
