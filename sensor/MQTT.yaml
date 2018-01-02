@@ -1,0 +1,44 @@
+- platform: mqtt
+  name: 'Codex Bedroom Door Temp'
+  unit_of_measurement: '°F'
+  state_topic: 'smartthings/Codex Bedroom Door/temperature'
+- platform: mqtt
+  name: 'Codex Window Temp'
+  unit_of_measurement: '°F'
+  state_topic: 'smartthings/Codex Window/temperature'
+- platform: mqtt
+  name: 'Lock Battery'
+  unit_of_measurement: '%'
+  state_topic: 'smartthings/Front Door Lock/battery'
+- platform: mqtt
+  name: 'Codex Window Battery'
+  unit_of_measurement: '%'
+  state_topic: 'smartthings/Codex Window/battery'
+- platform: mqtt
+  name: 'Codex Bedroom Door Battery'
+  unit_of_measurement: '%'
+  state_topic: 'smartthings/Codex Bedroom Door/battery'
+- platform: mqtt
+  name: 'Aeon Multisensor 6 Battery'
+  unit_of_measurement: '%'
+  state_topic: 'smartthings/Aeon Multisensor 6/battery'
+- platform: mqtt
+  name: 'Thermostat Temp'
+  unit_of_measurement: '°F'
+  state_topic: 'smartthings/Thermostat/temperature'
+- platform: mqtt
+  name: 'Thermostat Humidity'
+  unit_of_measurement: '%'
+  state_topic: 'smartthings/Thermostat/humidity'
+- platform: mqtt
+  name: 'Multisensor Humidity'
+  unit_of_measurement: '%'
+  state_topic: 'smartthings/Aeon Multisensor 6/humidity'
+- platform: mqtt
+  name: 'Multisensor Temperature'
+  unit_of_measurement: '°F'
+  state_topic: 'smartthings/Aeon Multisensor 6/temperature'
+- platform: mqtt
+  name: 'Multisensor Illuminance'
+  unit_of_measurement: lux
+  state_topic: 'smartthings/Aeon Multisensor 6/illuminance'
