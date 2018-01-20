@@ -1,0 +1,6 @@
+Multisensor:
+  entities:
+    - sensor.aeon_multisensor_6_battery
+    - sensor.multisensor_humidity
+    - sensor.multisensor_illuminance
+    - sensor.multisensor_temperature

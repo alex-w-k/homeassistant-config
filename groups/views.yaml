@@ -23,6 +23,7 @@ Living Room:
   entities:
     - group.LRLights
     - media_player.living_room
+    - group.Multisensor
 
 Codex Bedroom:
   view: yes
