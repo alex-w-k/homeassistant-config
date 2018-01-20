@@ -7,6 +7,12 @@
   unit_of_measurement: '°F'
   state_topic: 'smartthings/Codex Window/temperature'
 - platform: mqtt
+  name: 'Codex Bedroom Door Contact'
+  state_topic: 'smartthings/Codex Bedroom Door/contact'
+- platform: mqtt
+  name: 'Codex Window Contact'
+  state_topic: 'smartthings/Codex Window/contact'
+- platform: mqtt
   name: 'Lock Battery'
   unit_of_measurement: '%'
   state_topic: 'smartthings/Front Door Lock/battery'
@@ -42,3 +48,6 @@
   name: 'Multisensor Illuminance'
   unit_of_measurement: lux
   state_topic: 'smartthings/Aeon Multisensor 6/illuminance'
+- platform: mqtt
+  name: 'Multisensor Motion'
+  state_topic: 'smartthings/Aeon Multisensor 6/motion'

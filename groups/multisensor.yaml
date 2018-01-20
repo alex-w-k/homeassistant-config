@@ -4,3 +4,4 @@ Multisensor:
     - sensor.multisensor_humidity
     - sensor.multisensor_illuminance
     - sensor.multisensor_temperature
+    - sensor.multisensor_motion

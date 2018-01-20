@@ -1,0 +1,9 @@
+CBRsensors:
+  name: Codex Bedroom Sensors
+  entities:
+    - sensor.codex_bedroom_door_battery
+    - sensor.codex_bedroom_door_temp
+    - sensor.codex_bedroom_door_contact
+    - sensor.codex_window_battery
+    - sensor.codex_window_temp
+    - sensor.codex_window_contact

@@ -30,6 +30,7 @@ Codex Bedroom:
   entities:
     - group.CBRLights
     - media_player.codex_bedroom
+    - group.CBRsensors
 
 Other:
   view: yes
