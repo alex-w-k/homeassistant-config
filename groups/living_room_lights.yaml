@@ -1,6 +1,7 @@
 LRLights:
   name: Living Room Lights
   entities:
+    - light.living_room_downstairs
     - light.living_room_lamp
     - group.LR_Main_Lamp
     - light.living_room_top 
